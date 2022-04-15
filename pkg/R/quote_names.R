@@ -1,6 +1,6 @@
-#' Easy quote characters
+#' Easy quote names
 #'
-#' @param ... Unquoted variables (separated by commas) that you wish to quote;
+#' @param ... Unquoted names (separated by commas) that you wish to quote;
 #'   empty arguments (e.g. third item in `one,two,,four`) will be returned as
 #'   blanks.
 #' @param .clip Should the code to generate the constructed character vector be
@@ -21,8 +21,8 @@
 cc <- function(..., .clip = TRUE) {
     res <- vapply(substitute(list(...)), deparse, character(1))
     res <- res[-1]
-    if (interactive() && .clip && clipr::clipr_available())
+    if (interactive() && .clip && clipr::clipr_available()) {
         clipr::write_clip(capture.output(dput(res, control = "all")))
+    }
     res
 }
-

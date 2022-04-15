@@ -1,14 +1,14 @@
 Package: coffee
 Title: Stuff that helps me get going
-Version: 0.0.0.9000
+Version: 0.0.1
 Author: Tim Taylor
 Maintainer: Tim Taylor <tim.taylor@hiddenelephants.co.uk>
 Description: Miscellaneous functions to be included in my .Rprofile on startup.
 Encoding: UTF-8
-LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 Suggests: tinytest
 Imports: 
+    utils,
     clipr
 License: GPL-2

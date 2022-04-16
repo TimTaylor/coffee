@@ -1,3 +1,14 @@
+#' Create a package skeleton
+#'
+#' Create a package skeleton base on my preferred folder structure (hat tip to
+#' Mark Van der Loo)
+#'
+#' @param name Package name.
+#' @param dir Directory to start in.
+#' @param author Author.
+#' @param email Email.
+#'
+#' @return Created directory (invisibly)
 #' @export
 new_package <- function(
     name = "mypackage",

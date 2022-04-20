@@ -12,5 +12,7 @@ Suggests:
     tinytest
 Imports: 
     utils,
-    clipr
+    clipr,
+    graphics,
+    grDevices
 License: GPL-2

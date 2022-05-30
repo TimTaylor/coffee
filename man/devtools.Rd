@@ -3,21 +3,9 @@
 \name{devtools}
 \alias{devtools}
 \alias{test_package}
-\alias{load_package}
-\alias{document_package}
-\alias{install_package}
-\alias{check_package}
 \title{Devtools and tinytest wrappers}
 \usage{
 test_package()
-
-load_package()
-
-document_package()
-
-install_package()
-
-check_package()
 }
 \description{
 Wrappers functions around devtools and tinytest functionality adapted to my

@@ -1,8 +1,8 @@
 doc:
-	R -s -e "roxygen2::roxygenize('pkg', load_code = roxygen2::load_pkgload)"
+	R -s -e "roxygen2::roxygenize('.', load_code = roxygen2::load_pkgload)"
 
 pkg: doc
-	R CMD build pkg
+	R CMD build .
 
 install: pkg
 	R CMD INSTALL *.tar.gz
@@ -14,13 +14,13 @@ cran: pkg
 	R CMD check --as-cran *.tar.gz
 
 #test: doc
-#	R -s -e "tinytest::build_install_test('pkg')"
+#	R -s -e "tinytest::build_install_test('.')"
 
 #test: doc
-#	R -s -e "devtools::test('pkg')"
+#	R -s -e "devtools::test('.')"
 
 manual: doc
-	R CMD Rd2pdf --force -o manual.pdf ./pkg
+	R CMD Rd2pdf --force -o manual.pdf .
 
 revdep: pkg
 	rm -rf revdep
@@ -32,5 +32,4 @@ clean:
 	rm -rf *.Rcheck
 	rm -rf revdep
 	rm -f *.tar.gz
-
-
+	rm manual.pdf

@@ -8,7 +8,8 @@ new_package(
   name = "mypackage",
   dir = ".",
   author = getOption("coffee.name", "Joe Bloggs"),
-  email = getOption("coffee.email", "Joe.Bloggs@missing.com")
+  email = getOption("coffee.email", "Joe.Bloggs@missing.com"),
+  enter = TRUE
 )
 }
 \arguments{
@@ -25,5 +26,5 @@ Created directory (invisibly)
 }
 \description{
 Create a package skeleton base on my preferred folder structure (hat tip to
-Mark Van der Loo)
+Mark Van der Loo for Makefile idea)
 }

@@ -1,5 +1,1 @@
-Install via
-
-```r
-install.packages("coffee", repos = "https://timtaylor.r-universe.dev")
-```
+Retired in favour of https://github.com/TimTaylor/ympes
